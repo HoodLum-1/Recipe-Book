@@ -3,13 +3,11 @@ import { HttpClient, HttpParams, HttpRequest } from '@angular/common/http';
 import { RecipeService } from '../recipes/recipe.service';
 import { Recipe } from '../recipes/recipe.model';
 import { map, tap } from 'rxjs/operators';
-import { AuthService } from '../auth/auth.service';
 
 @Injectable()
 export class DataStorageService {
     constructor(private http: HttpClient, 
-                private recipeService: RecipeService,
-                private authService: AuthService) {}
+                private recipeService: RecipeService) {}
 
     storeRecipes() {
 
