@@ -13,11 +13,11 @@ export class AppComponent  implements OnInit{
     firebase.initializeApp({
       apiKey: "AIzaSyDTzPRmdGUtMsjB6ygHtqgl1z7Nk853apY",
       authDomain: "ng-recipe-book-2f9d4.firebaseapp.com",
-      databaseURL: "https://ng-recipe-book-2f9d4.firebaseio.com",
-      projectId: "ng-recipe-book-2f9d4",
-      storageBucket: "ng-recipe-book-2f9d4.appspot.com",
-      messagingSenderId: "972666164363",
-      appId: "1:972666164363:web:22c77bb9541b14719d708e"
+      // databaseURL: "ng-recipe-book-2f9d4.firebaseio.com",
+      // projectId: "ng-recipe-book-2f9d4",
+      // storageBucket: "ng-recipe-book-2f9d4.appspot.com",
+      // messagingSenderId: "972666164363",
+      // appId: "1:972666164363:web:22c77bb9541b14719d708e"
     });
   }
 
