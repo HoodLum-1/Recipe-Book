@@ -40,7 +40,7 @@ export class RecipeEditComponent implements OnInit {
     if (this.editMode) {
       this.store.dispatch(new RecipeActions.UpdateRecipe({
         index: this.id,
-        updateRecipe: this.recipeForm.value
+        updatedRecipe: this.recipeForm.value
       }));
     } else {
       this.store.dispatch(new RecipeActions.AddRecipe(this.recipeForm.value));
