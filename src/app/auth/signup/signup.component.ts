@@ -17,8 +17,7 @@ export class SignupComponent implements OnInit {
   ngOnInit() {
   }
 
-  //TODO fix login
-  onSingup(form: NgForm) {
+  onSignup(form: NgForm) {
     const email = form.value.email;
     const password = form.value.password;
     // this.authservice.signupUser(email, password);

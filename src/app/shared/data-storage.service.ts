@@ -3,43 +3,39 @@
 // import { RecipeService } from '../recipes/recipe.service';
 // import { Recipe } from '../recipes/recipe.model';
 // import { map, tap } from 'rxjs/operators';
+// import { AuthService } from '../auth/auth.service';
+// import { Subscription } from 'rxjs';
 
 // @Injectable()
 // export class DataStorageService {
 //     constructor(private http: HttpClient, 
 //                 private recipeService: RecipeService) {}
 
-//     storeRecipes() {
+// storeRecipes() {
+//   const token = this.authService.getToken();
 
-//         // return this.http.put('https://ng-recipe-book-2f9d4.firebaseio.com/recipes.json',
-//         //  this.recipeService.getRecipes(), {
-//         //   observe: 'body',
-//         //   params: new HttpParams().set('auth', token)
-//         // });
-//         const req = new HttpRequest('PUT', 'https://ng-recipe-book-2f9d4.firebaseio.com/recipes.json',
-//         this.recipeService.getRecipes(), {reportProgress: true,});
-//         return this.http.request(req);
-//     }
+//     return this.http.put('https://ng-recipe-book-2f9d4.firebaseio.com/recipes.json?auth=' + token, this.recipeService.getRecipes());
+// }
 
-//     getRecipes() {
-//     //  this.http.get<Recipe[]>('https://ng-recipe-book-2f9d4.firebaseio.com/recipes.json?auth=' + token).pipe(
-//      this.http.get<Recipe[]>('https://ng-recipe-book-2f9d4.firebaseio.com/recipes.json', {
-//        observe: 'body',
-//        responseType: 'json'
-//      }).pipe(
-//        map((recipes) => {
-//          console.log(recipes);
-//          for (let recipe of recipes) {
-//            if (!recipe['ingredients']) {
-//              recipe['ingredients'] = []; 
-//             }
-//           }
-//           return recipes;
-//         }
-//         )
-//         ).subscribe(
-//           (recipes: Recipe[]) => {
-//             this.recipeService.setRecipes(recipes);
-//           });
+// getRecipes() {
+//   const token = this.authService.getToken();
+  
+//   return this.http.get<Recipe[]>('https://ng-recipe-book-2f9d4.firebaseio.com/recipes.json?auth=' + token).pipe(
+//     map(
+//       (recipes) => {
+//         console.log(recipes);
+//       for (let recipe of recipes) {
+//         if (!recipe['ingredients']) {
+//           recipe['ingredients'] = [];
 //         }
 //       }
+//       return recipes;
+//     }
+//   )
+// ).subscribe(
+//   (recipes: Recipe[]) => {
+//     this.recipeService.setRecipes(recipes);
+//   }
+// );
+// }
+// }
